@@ -1,0 +1,41 @@
+{
+  "name": "pubsub_service",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "description": "Easily scalable pubsub microservice",
+  "scripts": {
+    "start": "node dist/main.js",
+    "start:dev": "nest start --watch",
+    "build": "nest build",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": [
+    "pubsub",
+    "scalable",
+    "nestjs",
+    "typescript"
+  ],
+  "author": "anton.zl",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^11.0.8",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/core": "^11.0.8",
+    "@nestjs/platform-express": "^11.0.8",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "redis": "^4.7.0",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.2",
+    "@nestjs/testing": "^11.0.8",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
