@@ -15,4 +15,7 @@ export class EnvironmentVariablesDto implements IConfig {
 
   @IsInt()
   PORT: number = DEFAULT_CONFIG.PORT;
+
+  @IsString()
+  INPUT_LIMIT: string = DEFAULT_CONFIG.INPUT_LIMIT;
 }
