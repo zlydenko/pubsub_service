@@ -4,6 +4,7 @@ import { Logger } from '@nestjs/common';
 import { json, urlencoded } from 'express';
 
 import { AppModule } from './app.module';
+import { setupSwagger } from './swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
@@ -15,9 +16,12 @@ async function bootstrap() {
   app.use(json({ limit: inputLimit }));
   app.use(urlencoded({ extended: true, limit: inputLimit }));
 
+  setupSwagger(app);
+
   const port = configService.get<number>('PORT') as number;
   await app.listen(port);
   Logger.log(`Application is running on: http://localhost:${port}`);
+  Logger.log(`Swagger documentation: http://localhost:${port}/docs`);
 }
 
 bootstrap();
