@@ -2,3 +2,6 @@ node_modules
 .env
 package-lock.json
 dist
+k6_result.json
+k6test.js
+test*.json
